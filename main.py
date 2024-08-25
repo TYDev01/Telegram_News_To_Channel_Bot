@@ -56,7 +56,7 @@ async def schedule_tasks():
 
 def run_bot():
     # Schedule the bot to run every 5 seconds
-    schedule.every(1).hour.do(lambda: asyncio.create_task(send_crypto_news()))
+    schedule.every(45).minutes.do(lambda: asyncio.create_task(send_crypto_news()))
 
     # Run the scheduler
     asyncio.run(schedule_tasks())
