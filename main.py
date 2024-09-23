@@ -61,7 +61,7 @@ def run_bot():
 
     # Run the scheduler
     asyncio.run(schedule_tasks())
-    mainFunc()
+    mainFunc() # Calling the urlmain
 
 # Run the bot
 run_bot()
