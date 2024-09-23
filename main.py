@@ -8,7 +8,7 @@ import asyncio
 from telegram import Bot
 from telegram.constants import ParseMode
 from dotenv import load_dotenv
-from .urlmain import mainFunc
+from urlmain import mainFunc
 
 # Load environment variables from .env file
 load_dotenv()
