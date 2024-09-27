@@ -8,7 +8,6 @@ import asyncio
 from telegram import Bot
 from telegram.constants import ParseMode
 from dotenv import load_dotenv
-from urlmain import mainFunc
 
 # Load environment variables from .env file
 load_dotenv()
@@ -57,11 +56,10 @@ async def schedule_tasks():
 
 def run_bot():
     # Schedule the bot to run every 5 seconds
-    schedule.every(90).minutes.do(lambda: asyncio.create_task(send_crypto_news()))
+    schedule.every(120).minutes.do(lambda: asyncio.create_task(send_crypto_news()))
 
     # Run the scheduler
     asyncio.run(schedule_tasks())
-    mainFunc() # Calling the urlmain
 
 # Run the bot
 run_bot()
